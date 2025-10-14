@@ -9,9 +9,9 @@
 // to define the size of each tile
 #define TILE_SIZE 42
 // how many types of tiles we'll include
-#define TILE_TYPES 5
+#define TILE_TYPES 7
 
-const char tile_chars[TILE_TYPES] = {'#', '@', '$%', '%', '&'};
+const char tile_chars[TILE_TYPES] = {'#', '@', '$%', '%', '&', '*', '+'};
 
 char board[BOARD_SIZE][BOARD_SIZE];
 
