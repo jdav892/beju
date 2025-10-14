@@ -21,6 +21,7 @@ char random_tile() {
   return tile_chars[rand() % TILE_TYPES];
 }
 
+// generate board from here BOARD_SIZE and TILE_SIZE
 void init_board() {
   for (int y = 0; y < BOARD_SIZE; y++) {
       for (int x = 0; x < BOARD_SIZE; x++) {
@@ -38,6 +39,7 @@ void init_board() {
 }
 
 int main(void) {
+  // create window
   const int screen_width = 800;
   const int screen_height = 450;
 
@@ -49,7 +51,6 @@ int main(void) {
 
   while (!WindowShouldClose()) {
     // game logic goes here
-    //
     BeginDrawing();
     ClearBackground(BLACK);
     
