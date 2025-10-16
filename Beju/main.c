@@ -44,7 +44,7 @@ void init_board() {
 }
 
 int main(void) {
-  // create window
+  // create window and its demensions
   const int screen_width = 800;
   const int screen_height = 450;
 
@@ -58,11 +58,12 @@ int main(void) {
   init_board();
 
   while (!WindowShouldClose()) {
-    // game logic goes here
+    // game logic
 
     BeginDrawing();
     ClearBackground(BLACK);
     
+    // create boxes for board
     DrawTexturePro(
         background,
         (Rectangle) {
@@ -77,7 +78,7 @@ int main(void) {
         0.0f,
         WHITE
     );
-
+    //generate the 2D Board
     for (int y = 0; y < BOARD_SIZE; y++){
       for (int x = 0; x < BOARD_SIZE; x++){
         Rectangle rect = {
@@ -88,7 +89,7 @@ int main(void) {
         };
 
         DrawRectangleLinesEx(rect, 1, BLACK);
-        
+
         DrawTextEx(
           GetFontDefault(),
           TextFormat("%c", board[y][x]),
@@ -97,7 +98,7 @@ int main(void) {
         );
       }
     }
-    
+    // Dimensions of font and uses font import
     DrawTextEx(
       score_font,
       TextFormat("SCORE: %d", score),
@@ -108,7 +109,6 @@ int main(void) {
       1.0f,
       BLUE
     );
-    //DrawText(TextFormat("SCORE: %d", score), 20, 20, 24, BLUE);
     EndDrawing();
   }
   
