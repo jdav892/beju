@@ -1,16 +1,24 @@
 ﻿  main.c
 C:\Users\jay-5\source\repos\Beju\Beju\main.c(16,48): warning C4305: 'initializing': truncation from 'int' to 'const char'
-C:\Users\jay-5\source\repos\Beju\Beju\main.c(76,51): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\jay-5\source\repos\Beju\Beju\main.c(86,47): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\jay-5\source\repos\Beju\Beju\main.c(104,37): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\jay-5\source\repos\Beju\Beju\main.c(105,39): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\jay-5\source\repos\Beju\Beju\main.c(116,9): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\jay-5\source\repos\Beju\Beju\main.c(131,35): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\jay-5\source\repos\Beju\Beju\main.c(131,38): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\jay-5\source\repos\Beju\Beju\main.c(157,25): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\jay-5\source\repos\Beju\Beju\main.c(157,43): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\jay-5\source\repos\Beju\Beju\main.c(160,15): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\jay-5\source\repos\Beju\Beju\main.c(160,33): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\jay-5\source\repos\Beju\Beju\main.c(128,41): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\jay-5\source\repos\Beju\Beju\main.c(129,41): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\jay-5\source\repos\Beju\Beju\main.c(86,51): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\jay-5\source\repos\Beju\Beju\main.c(96,47): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\jay-5\source\repos\Beju\Beju\main.c(114,37): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\jay-5\source\repos\Beju\Beju\main.c(115,39): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\jay-5\source\repos\Beju\Beju\main.c(126,9): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\jay-5\source\repos\Beju\Beju\main.c(141,42): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\jay-5\source\repos\Beju\Beju\main.c(141,45): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\jay-5\source\repos\Beju\Beju\main.c(147,37): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+C:\Users\jay-5\source\repos\Beju\Beju\main.c(147,54): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+C:\Users\jay-5\source\repos\Beju\Beju\main.c(147,70): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+C:\Users\jay-5\source\repos\Beju\Beju\main.c(147,86): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+C:\Users\jay-5\source\repos\Beju\Beju\main.c(152,37): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+C:\Users\jay-5\source\repos\Beju\Beju\main.c(152,54): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+C:\Users\jay-5\source\repos\Beju\Beju\main.c(152,70): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+C:\Users\jay-5\source\repos\Beju\Beju\main.c(152,86): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+C:\Users\jay-5\source\repos\Beju\Beju\main.c(182,25): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\jay-5\source\repos\Beju\Beju\main.c(182,43): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\jay-5\source\repos\Beju\Beju\main.c(185,15): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\jay-5\source\repos\Beju\Beju\main.c(185,33): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\jay-5\source\repos\Beju\Beju\main.c(138,41): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\jay-5\source\repos\Beju\Beju\main.c(139,41): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   Beju.vcxproj -> C:\Users\jay-5\source\repos\Beju\x64\Debug\Beju.exe
