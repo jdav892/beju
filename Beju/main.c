@@ -5,7 +5,7 @@
 #include <time.h>
 
 // to define dimensions of board
-#define BOARD_SIZE 8
+#define BOARD_SIZE 10
 // to define the size of each tile
 #define TILE_SIZE 42
 // how many types of tiles we'll include
@@ -28,6 +28,9 @@ Vector2 selected_tile = {-1, -1};
 float fall_speed = 8.0f;
 float match_delay_timer = 0.0f;
 const float MATCH_DELAY_DURATION = 2.6f;
+
+Music background_music;
+Sound match_sound;
 
 typedef enum {
   STATE_IDLE,
@@ -68,6 +71,7 @@ bool find_matches() {
         // update score
         score += 10;
         found = true;
+        PlaySound(match_sound);
       }
     }
   }
@@ -80,6 +84,7 @@ bool find_matches() {
         matched[y][x] = matched[y + 1][x] = matched[y + 2][x] =-true;
         score += 10;
         found = true;
+        PlaySound(match_sound);
       }
     }
   }
@@ -136,20 +141,30 @@ void init_board() {
 
 int main(void) {
   // create window and its demensions
-  const int screen_width = 800;
-  const int screen_height = 450;
+  const int screen_width = 1000;
+  const int screen_height = 600;
 
   InitWindow(screen_width, screen_height, "Beju Board");
   SetTargetFPS(60);
   srand(time(NULL));
-  
+
+  InitAudioDevice();
+
   background = LoadTexture("C:/Users/jay-5/source/repos/Beju/assets/background.jpg");
   score_font = LoadFontEx("C:/Users/jay-5/source/repos/Beju/assets/Trader-lxrWd.ttf", SCORE_FONT_SIZE, NULL, 0);
+  background_music = LoadMusicStream("C:/Users/jay-5/source/repos/Beju/assets/bgm_old.mp3");
+  match_sound = LoadSound("C:/Users/jay-5/source/repos/Beju/assets/match.mp3");
+  
+  PlayMusicStream(background_music);
+
   
   init_board();
   Vector2 mouse = {0, 0};
 
   while (!WindowShouldClose()) {
+
+    UpdateMusicStream(background_music);
+
     // game logic
     mouse = GetMousePosition();
     if (tile_state == STATE_IDLE && IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
@@ -232,6 +247,15 @@ int main(void) {
         0.0f,
         WHITE
     );
+    
+    DrawRectangle(
+      grid_origin.x,
+      grid_origin.y,
+      BOARD_SIZE* TILE_SIZE,
+      BOARD_SIZE* TILE_SIZE,
+      Fade(BLACK, 0.60f)
+    );
+
     //generate the 2D Board
     for (int y = 0; y < BOARD_SIZE; y++){
       for (int x = 0; x < BOARD_SIZE; x++){
@@ -254,7 +278,7 @@ int main(void) {
             },
           20,
           1,
-          matched[y][x] ? GREEN : BLUE
+          matched[y][x] ? GREEN : WHITE
           );
         }
       }
@@ -265,7 +289,7 @@ int main(void) {
         grid_origin.x + (selected_tile.x * TILE_SIZE),
         grid_origin.y + (selected_tile.y * TILE_SIZE),
         TILE_SIZE, TILE_SIZE
-      }, 2, YELLOW);
+      }, 2, BLUE);
     }
 
     // Dimensions of font and uses font import
@@ -281,7 +305,9 @@ int main(void) {
     );
     EndDrawing();
   }
-  
+  StopMusicStream(background_music);
+  UnloadMusicStream(background_music);
+  UnloadSound(match_sound);
   UnloadTexture(background);
   UnloadFont(score_font);
   return 0;
